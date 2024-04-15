@@ -1,0 +1,221 @@
+/* *{
+    border: 1px solid red
+}  */
+
+.pare{
+    background-color:rgb(182, 123, 21) ;
+    margin-top: 10vh;
+    padding-top: 10px;
+}
+.pare .yll1{
+    text-align: center;
+    color: rgb(142, 93, 9);
+    font-size: 10px;
+}
+
+.epara ul {
+    list-style-type: none;
+    margin: 10px;
+    padding: 0px 20px 20px 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+  
+.epara li {
+    float: left;
+}
+  
+.epara li a {
+    display: block;
+    color:white;
+    text-align:center;
+    text-decoration: none;
+    padding: 10px;
+    margin: 3px;
+}
+
+.epara #titull{
+    color:white;
+    padding: 5px;
+    margin-top: 0px;
+    font-family: "Comforter", cursive;
+    font-weight: 400;
+    font-style: normal;   
+    font-size: 27px; 
+}
+
+.epara #kuti{
+    border: 0.5px solid;
+    border-color: rgb(255, 255, 255);
+    background-color:rgb(182, 123, 21);
+    padding: 10px;
+    font-size: 17px;
+}
+
+
+.foto{
+    background-image: url('image/galerryhome.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    top: 0px;
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foto h1{
+    font-size:60px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    position: absolute;
+}
+
+.dhomat{
+    margin: 40px;
+}
+
+.rooms-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Hapësira midis rreshtave */
+}
+
+.room-container {
+    position: relative;
+    display: inline-block;
+    width: calc(50% - 10px); /* Një dhomë në rresht */
+    margin-bottom: 20px; /* Hapësira midis dhomave */
+}
+
+.room-image {
+    width: 100%;
+    height: 250px;
+    transition: box-shadow 0.3s; /* Krijon një tranzicion kur ndryshon box shadow */
+}
+
+.room-container:hover .room-image {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Shtimi i box shadow kur kursoni prek mbi foton */
+}
+
+.room-container {
+    position: relative;
+    display: inline-block;
+    width: calc(50% - 10px); /* Një dhomë në rresht */
+    margin-bottom: 20px; /* Hapësira midis dhomave */
+}
+
+
+
+
+.foter{
+    background-color: rgb(182, 123, 21);
+ }
+ 
+ .foter .grid-container{
+     display: grid;
+     grid-template-columns: auto auto auto auto;
+     margin: 50px;
+ }
+ 
+ .foter #royal{
+     color:white;
+     padding: 5px;
+     text-align: center;
+     border-width: 4px 0px 0px 0px;
+     font-family: "Comforter", cursive;
+     font-weight: 400;
+     font-style: bold;   
+     font-size: 27px; 
+ }
+
+ .room-container{
+    position: relative;
+    text-align: center;
+    color: white;
+ }
+ 
+ /* .room-container:hover .room-image {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+} */
+
+.tooltip{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 30px;
+}
+
+.room-container:hover .tooltip{
+    opacity: 1;
+}
+
+
+ .foter h2{
+     color:white;
+ }
+ 
+ .foter p{
+     color:white;
+ }
+ 
+ .foter .social i{
+     color: white;
+     margin: 5px;
+ }
+ 
+ .foter .yll{
+     font-size: 9px;
+     color: rgba(238, 155, 11, 0.64);
+     text-align: center;
+     margin-top: 10px;
+ }
+ 
+@media screen and (max-width:500px){
+    .dhomat .rooms-row {
+        display: block;
+    }
+    .dhomat .room-container {
+        width: 100%;
+        margin: 10px 0;
+    }
+    .tooltip {
+        font-size: 20px; /* You can adjust the font size as per your preference */
+        position: static; /* Remove absolute positioning */
+        width: auto; /* Allow the tooltip to shrink to its content */
+        height: auto;
+        background-color: rgba(0, 0, 0, 0.8); /* Adjust background color if needed */
+        padding: 10px; /* Add some padding for better readability */
+        text-align: center; /* Center the text */
+    }
+    .room-container:hover .tooltip {
+        opacity: 1; /* Show the tooltip on hover */
+    }
+    .foter .grid-container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .foter .grid-item{
+            flex: 1 100%; /* Kur ekranit është më i vogël se 500px, shfaq dy kolona në një rresht */
+            max-width: 50%; /* Maksimumi i gjërësisë për një kolonë në rresht */
+            margin-bottom: 10px;
+    }
+    .foter #royal {
+        font-size: 23px;
+    }
+    .foter h2{
+        font-size: 20px;
+    }
+}
