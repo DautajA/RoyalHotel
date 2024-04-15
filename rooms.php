@@ -39,26 +39,31 @@
 
   </section>
 
-  <section class="dhomat">
+ <section class="dhomat">
   <div class="rooms-row">
     <div class="room-container">
-        <a href="room.php?dhoma_id=1"><img src="image/room1.jpeg" alt="Double Room" class="room-image"></a>
+        <a href="room.php?dhoma_id=1"><img src="image/room1.jpeg" alt="Double Room" class="room-image">
         <span class="tooltip">Double Room</span>
+        </a>
     </div>
     <div class="room-container">
-        <a href="room.php?dhoma_id=2"><img src="image/room2.jpeg" alt="Triple Room" class="room-image"></a>
+        <a href="room.php?dhoma_id=2"><img src="image/room2.jpeg" alt="Triple Room" class="room-image">
         <span class="tooltip">Triple Room</span>
+        </a>
     </div>
 </div>
 <div class="rooms-row">
     <div class="room-container">
-        <a href="room.php?dhoma_id=3"><img src="image/room3.jpeg" alt="Quadruple Room" class="room-image"></a>
+        <a href="room.php?dhoma_id=3"><img src="image/room3.jpeg" alt="Quadruple Room" class="room-image">
         <span class="tooltip">Quadruple Room</span>
+        </a>
     </div>
     <div class="room-container">
-        <a href="room.php?dhoma_id=4"><img src="image/room4.jpeg" alt="Family Room" class="room-image"></a>
-        <span class="tooltip">Family Room</span>
+        <a href="room.php?dhoma_id=4"><img src="image/room4.jpeg" alt="Family Room" class="room-image">
+        <div class="image-text">Family Room</div>
+        </a>
     </div>
+</div>
 </div>
  </section>
 
