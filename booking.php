@@ -93,9 +93,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $adults = $_POST["adult"];
     $children = $_POST["children"];
 
-       // Kontrollo nëse datat janë zgjedhur
-       if (!empty($arrival) && !empty($departure)) {
-        $sql = "INSERT INTO reservations(selectroom, arrival, departure, adults, children) VALUES ('$room', '$arrival', '$departure', '$adults', '$children')";
+// Kontrollo nëse datat janë zgjedhur
+if (!empty($arrival) && !empty($departure)) {
+
+    // Kontrollo nëse data e largimit është më e vonshme se data e ardhjes
+    if (strtotime($departure) <= strtotime($arrival)) {
+        $message = "Departure date must be later than arrival date.";
+        $message_class = "error";
+    } else {
+        // Nëse datat janë të sakta, dërgo në bazën e të dhënave
+        $sql = "INSERT INTO reservations(selectroom, arrival, departure, adults, children) 
+                VALUES ('$room', '$arrival', '$departure', '$adults', '$children')";
 
         if ($conn->query($sql) === TRUE) {
             $message = "Data sent to the database successfully!";
@@ -104,10 +112,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $message = "An error occurred, the data was not saved to the database: " . $conn->error;
             $message_class = "error";
         }
-    } else {
-        $message = "Please select the arrival and departure dates.";
-        $message_class = "error";
     }
+} else {
+    $message = "Please select the arrival and departure dates.";
+    $message_class = "error";
+}
+
 }
 
 $conn->close();

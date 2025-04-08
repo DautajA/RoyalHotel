@@ -36,12 +36,14 @@
     <section class="dhomat">
         <div class="rooms-row">
         <div class="room-container">
-           <a href="spa.php"><img src="image/galerry1.jpeg" alt="" class="room-image"></a>
+           <a href="spa.php"><img src="image/galerry1.jpeg" alt="" class="room-image">
            <p class="tooltip">Royal Spa</p>
+           </a>
         </div>
         <div class="room-container">
-            <a href="hotel.php"><img src="image/galerry2.jpeg" alt="" class="room-image"></a>
+            <a href="hotel.php"><img src="image/galerry2.jpeg" alt="" class="room-image">
             <p class="tooltip">Royal Hotel</p>
+            </a>
         </div>
         </div>
      </section>

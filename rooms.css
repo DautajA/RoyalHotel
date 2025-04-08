@@ -1,9 +1,10 @@
-.pare{
-    background-color:rgb(182, 123, 21) ;
+.pare {
+    background-color: rgb(182, 123, 21);
     margin-top: 10vh;
     padding-top: 10px;
 }
-.pare .yll1{
+
+.pare .yll1 {
     text-align: center;
     color: rgb(142, 93, 9);
     font-size: 10px;
@@ -24,15 +25,15 @@
   
 .epara li a {
     display: block;
-    color:white;
-    text-align:center;
+    color: white;
+    text-align: center;
     text-decoration: none;
     padding: 10px;
     margin: 3px;
 }
 
-.epara #titull{
-    color:white;
+.epara #titull {
+    color: white;
     padding: 5px;
     margin-top: 0px;
     font-family: "Comforter", cursive;
@@ -41,15 +42,15 @@
     font-size: 27px; 
 }
 
-.epara #kuti{
+.epara #kuti {
     border: 0.5px solid;
     border-color: rgb(255, 255, 255);
-    background-color:rgb(182, 123, 21);
+    background-color: rgb(182, 123, 21);
     padding: 10px;
     font-size: 17px;
 }
 
-.foto{
+.foto {
     background-image: url('image/roomhome.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -62,45 +63,40 @@
     align-items: center;
 }
 
-.foto h1{
-    font-size:60px;
+.foto h1 {
+    font-size: 60px;
     text-align: center;
     color: rgb(255, 255, 255);
     position: absolute;
 }
 
-.pershkrim{
+.pershkrim {
     margin: 100px;
 }
 
-.dhomat{
+.dhomat {
     margin: 40px;
 }
 
 .rooms-row {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 20px; /* Hapësira midis rreshtave */
-}
-
-.room-container {
-    position: relative;
-    display: inline-block;
-    width: calc(50% - 10px); /* Një dhomë në rresht */
-    margin-bottom: 20px; /* Hapësira midis dhomave */
+    margin-bottom: 20px;
 }
 
 .room-image {
     width: 100%;
     height: 250px;
-    transition: box-shadow 0.3s; /* Krijon një tranzicion kur ndryshon box shadow */
+    transition: box-shadow 0.3s;
+    object-fit: cover;
 }
 
 .room-container:hover .room-image {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Shtimi i box shadow kur kursoni prek mbi foton */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-.tooltip{
+.tooltip {
     position: absolute;
     top: 0;
     left: 0;
@@ -114,86 +110,103 @@
     opacity: 0;
     transition: opacity 0.3s ease;
     font-size: 30px;
+    pointer-events: none;
 }
 
-.room-container:hover .tooltip{
+.room-container:hover .tooltip {
     opacity: 1;
 }
 
-/* test */
 .room-container {
     position: relative;
     display: inline-block;
-    width: calc(50% - 10px); /* Një dhomë në rresht */
-    margin-bottom: 20px; /* Hapësira midis dhomave */
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+    box-sizing: border-box;
 }
 
-.foter{
+.room-container {
+    position: relative;
+    display: inline-block;
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+.foter {
     background-color: rgb(182, 123, 21);
- }
- 
- .foter .grid-container{
-     display: grid;
-     grid-template-columns: auto auto auto auto;
-     margin: 50px;
- }
- 
- .foter #royal{
-     color:white;
-     padding: 5px;
-     text-align: center;
-     border-width: 4px 0px 0px 0px;
-     font-family: "Comforter", cursive;
-     font-weight: 400;
-     font-style: bold;   
-     font-size: 27px; 
- }
- 
- .foter h2{
-     color:white;
- }
- 
- .foter p{
-     color:white;
- }
- 
- .foter .social i{
-     color: white;
-     margin: 5px;
- }
- 
- .foter .yll{
-     font-size: 9px;
-     color: rgba(238, 155, 11, 0.64);
-     text-align: center;
-     margin-top: 10px;
- }
- 
- 
-@media screen and (max-width:500px){
+}
+
+.foter .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin: 50px;
+}
+
+.foter #royal {
+    color: white;
+    padding: 5px;
+    text-align: center;
+    border-width: 4px 0px 0px 0px;
+    font-family: "Comforter", cursive;
+    font-weight: 400;
+    font-style: bold;   
+    font-size: 27px; 
+}
+
+.foter h2 {
+    color: white;
+}
+
+.foter p {
+    color: white;
+}
+
+.foter .social i {
+    color: white;
+    margin: 5px;
+}
+
+.foter .yll {
+    font-size: 9px;
+    color: rgba(238, 155, 11, 0.64);
+    text-align: center;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 500px) {
     .dhomat .rooms-row {
         display: block;
     }
+
     .dhomat .room-container {
         width: 100%;
         margin: 10px 0;
     }
+
     .dhomat .room-image {
         max-height: 250px;
     }
-    .foter .grid-container{
+
+    .tooltip {
+        font-size: 20px;
+    }
+
+    .foter .grid-container {
         display: flex;
         flex-wrap: wrap;
     }
-    .foter .grid-item{
-            flex: 1 100%; /* Kur ekranit është më i vogël se 500px, shfaq dy kolona në një rresht */
-            max-width: 50%; /* Maksimumi i gjërësisë për një kolonë në rresht */
-            margin-bottom: 10px;
+
+    .foter .grid-item {
+        flex: 1 100%;
+        max-width: 50%;
+        margin-bottom: 10px;
     }
+
     .foter #royal {
         font-size: 23px;
     }
-    .foter h2{
+
+    .foter h2 {
         font-size: 20px;
     }
 }
